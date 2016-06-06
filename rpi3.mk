@@ -15,11 +15,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.$(TARGET_PRODUCT) \
     audio.primary.$(TARGET_PRODUCT) \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    Launcher2 \
-    LeanbackLauncher \
-    Settings \
-    Browser2
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
