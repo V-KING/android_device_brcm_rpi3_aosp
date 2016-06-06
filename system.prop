@@ -3,3 +3,4 @@ ro.sf.lcd_density=213
 # debug.drm.mode.force=1280x720
 wifi.interface=wlan0
 ro.rfkilldisabled=1
+ro.build.selinux=1
