@@ -4,7 +4,7 @@ $(call inherit-product, build/target/product/aosp_arm.mk)
 PRODUCT_NAME := rpi3
 PRODUCT_DEVICE := rpi3
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Android on rpi3
+PRODUCT_MODEL := Raspberry Pi 3
 PRODUCT_MANUFACTURER := brcm
 
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
