@@ -1,0 +1,22 @@
+diff -ur a/core/java/android/view/GestureDetector.java b/core/java/android/view/GestureDetector.java
+--- GestureDetector.java        2016-06-09 11:09:51.007271739 +0200
++++ GestureDetectorPatched.java 2016-06-09 11:12:39.675255676 +0200
+@@ -439,7 +439,17 @@
+      *              else false.
+      */
+     public boolean onTouchEvent(MotionEvent ev) {
+-        if (mInputEventConsistencyVerifier != null) {
++        switch(ev.getAction() & MotionEvent.ACTION_MASK) {
++            case MotionEvent.ACTION_HOVER_MOVE:
++            case MotionEvent.ACTION_HOVER_ENTER:
++            case MotionEvent.ACTION_HOVER_EXIT:
++            case MotionEvent.ACTION_BUTTON_PRESS:
++            case MotionEvent.ACTION_BUTTON_RELEASE:
++            case MotionEvent.ACTION_SCROLL:
++                return false;
++        }
++
++       if (mInputEventConsistencyVerifier != null) {
+             mInputEventConsistencyVerifier.onTouchEvent(ev, 0);
+         }
+         final int action = ev.getAction();
