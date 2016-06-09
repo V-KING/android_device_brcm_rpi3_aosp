@@ -20,7 +20,9 @@ Read it first : https://github.com/peyo-hd/local_manifests/tree/npv
  $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage
  $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make dtbs
 
-# Patch frameworks/base (old method, patch coming soon!)
+# Patch
+  Run: patch -p1 < device/brcm/rpi3/Patch.diff
+  OR
   https://github.com/peyo-hd/device_brcm_rpi2/wiki#avoid-logcat-flood
  
 # Building the Android
