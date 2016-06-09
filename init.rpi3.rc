@@ -17,6 +17,10 @@ on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp wifi
+    
+    # Add emulated sdcard here!
+    #service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /storage/sdcard
+	#	class late_start
 
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
